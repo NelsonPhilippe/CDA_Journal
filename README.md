@@ -93,11 +93,11 @@
 
 ### Les roles
 
-- Product Owner
+- __**Product Owner**__
 
 > Personne ayant la responsabilité de produire et de maintenir à jour le carnet de produit. C'est lui qui détermine les priorités et qui prend les décisions d'orientation du projet.
 
-- Scrum Master
+- __**Scrum Master**__
 
 > Membre de l'équipe dont l'objectif principal est de la protéger des perturbations extérieures. Il est complètement transparent pour la communication entre l'équipe et les clients et n'a aucun pouvoir hiérarchique sur l'équipe. C'est en revanche un facilitateur pour les problèmes non techniques de l'équipe.
 
