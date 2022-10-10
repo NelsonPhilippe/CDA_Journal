@@ -102,8 +102,24 @@
 > Membre de l'équipe dont l'objectif principal est de la protéger des perturbations extérieures. Il est complètement transparent pour la communication entre l'équipe et les clients et n'a aucun pouvoir hiérarchique sur l'équipe. C'est en revanche un facilitateur pour les problèmes non techniques de l'équipe.
 
 
+### Méthodes de découpage
+
+- __**Epic**__
+
+> **Les epics** sont un moyen utile d'organiser votre travail sous une forme d'arborescente. L'idée de découper le tracail en morceaux livrables, pour réussir a terminer de gros projets en livrant tout au long de la valeur à vos clients. Les epics aident les équipes a découper leur travail tout en continuant à travailler vers un objectif plus grand.
 
 
+- __**User Story**__
+
+> **User story** est une explication non formelle, général d'une fonctionnalité logicielle écrite du point de vue de l'utilisateur final
+
+- __**Product backlog**__
+
+> **Product backlog** est une liste de toutes les fonctionnalités que l'on souhaite implémenter dans le produit. Il est composé de user story et d'epics.
+
+- __**Sprint backlog**__
+
+> **Sprint backlog** est une liste des tâches à effectuer pour livrer une fonctionnalité.
 
 
 
