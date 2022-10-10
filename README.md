@@ -12,14 +12,15 @@
 
 ## Journal de formation Concepteur d'Application (2022)
 
+## Table des matières
+
+1. [Les principes de la méthodes agile](#Les principes de la méthode agile) 
+
 ### Semaine du 10/10
 
 ---
 
-### Définition de "méthode agile"
-
-
-### Les principes de la méthode agile
+## Les principes de la méthode agile
 
 - Satisfaire le client avec un produit de qualité et de nécessité
 - Accueillir  favorablement les demandes de changements
