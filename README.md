@@ -30,29 +30,29 @@
 
 ### Satifaire
 
-> Présenter des demos fonctionnel.
-> Définir correctement les besoins client, satisfaire pendant une démo technique.
+> Présenter des demos fonctionnel. <br />
+> Définir correctement les besoins client, satisfaire pendant une démo technique. <br />
 
 ### Adaptation
 
-> Se réadapter au nouveau besoin du client.
-> Anticiper de potentielle changement même tardif dans le processus.
-> Le changement et le bienvenue.
+> Se réadapter au nouveau besoin du client. <br />
+> Anticiper de potentielle changement même tardif dans le processus. <br />
+> Le changement et le bienvenue. <br />
 
 ### Productivité
 
-> Fournir fréquement des solutions fonctionnelles.
-> Prioriser les solutions importantes.
-> Segmenter la productions du projet.
+> Fournir fréquement des solutions fonctionnelles. <br />
+> Prioriser les solutions importantes. <br />
+> Segmenter la productions du projet. <br />
 
 ### Communication client
 
-> Le client fait partie de l'équipe.
-> Communication permanante avec le client.
-> Etablir une relation de confiance avec le client.
+> Le client fait partie de l'équipe. <br />
+> Communication permanante avec le client. <br />
+> Etablir une relation de confiance avec le client. <br />
 
 ### Communication 
 
-> Adaptation et amélioration de l'équipe
-> Privilégier le contacte humain.
+> Adaptation et amélioration de l'équipe <br />
+> Privilégier le contacte humain. <br />
 >	Ex : L'envoie de mail ne retranscrit pas les sentiments réel d'une personne, le contacte humain facilite la compréhension. 
