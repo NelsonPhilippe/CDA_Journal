@@ -54,6 +54,9 @@
 > Fournir fréquement des solutions fonctionnelles. <br />
 > Prioriser les solutions importantes. <br />
 > Segmenter la productions du projet. <br />
+> Une ligne de conduite rigoureuse lors du développement du projet. <br />
+> Productivité constante. <br />
+> La simplicité et l'art de maximisé la quantité de travail que on ne fait pas. <br />
 
 ### Communication client
 
@@ -65,4 +68,21 @@
 
 > Adaptation et amélioration de l'équipe <br />
 > Privilégier le contacte humain. <br />
-> &nbsp;Ex : L'envoie de mail ne retranscrit pas les sentiments réel d'une personne, le contacte humain facilite la compréhension. 
+> &nbsp;E&nbsp;&nbsp;&nbsp;Ex : L'envoie de mail ne retranscrit pas les sentiments réel d'une personne, le contacte humain facilite la compréhension. 
+> Le contacte humain facilite la compréhension. <br />
+> Communication verbal et non verbal (communication face à face). <br />
+> Auto-responsabilisé les membres de l'équipe.
+
+### Motivation
+
+> Encourager les personnes de l'équipe. <br />
+> Entraide. <br />
+> Créer un lieux de travail adequat. <br />
+> Créer une relation de confiance avec son équipe. <br />
+
+
+### Organisation
+
+> Membres auto-organisé. <br />
+> Choix des technologies par rapport au besoin du client. <br />
+
