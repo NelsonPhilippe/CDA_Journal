@@ -14,7 +14,9 @@
 
 ## Table des matières
 
-1. [Les principes de la méthodes agile](#pma) 
+1. [Les principes de la méthodes agile](#pma)
+2. [Les fondamentaux de la méthode agile](#fma) 
+3. [Le scrum](#scrum)
 
 ### Semaine du 10/10
 
@@ -37,7 +39,7 @@
 
 
 ---
-
+## Les fondamentaux de la méthode agile. <a name="fma"></a>
 
 ### Satifaire
 
@@ -87,7 +89,9 @@
 > Membres auto-organisé. <br />
 > Choix des technologies par rapport au besoin du client. <br />
 
-## Le scrum
+---
+
+## Le scrum <a name="scrum"></a>
 
 ### Définition
 
@@ -96,5 +100,21 @@
 <div>
 <img src="images/scrum_schema.jpeg">
 </div>
+
+### Les roles
+
+- Product Owner
+
+> Personne ayant la responsabilité de produire et de maintenir à jour le carnet de produit. C'est lui qui détermine les priorités et qui prend les décisions d'orientation du projet.
+
+- Scrum Master
+
+> Membre de l'équipe dont l'objectif principal est de la protéger des perturbations extérieures. Il est complètement transparent pour la communication entre l'équipe et les clients et n'a aucun pouvoir hiérarchique sur l'équipe. C'est en revanche un facilitateur pour les problèmes non techniques de l'équipe.
+
+
+
+
+
+
 
 
