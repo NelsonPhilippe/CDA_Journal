@@ -121,6 +121,37 @@
 
 > **Sprint backlog** est une liste des tâches à effectuer pour livrer une fonctionnalité.
 
+---
+
+# Jira
+____
+> Suivi de projets et de tickets
+____
+![jira](https://support.seiitra.com/images/atlassian-jira-logo-large.png)
+
+
+___
+> Jira est un système de suivi de bugs, de gestion des incidents et de gestion de projets.
+
+# Fonctionnement
+___
+> L'outil Jira est destiné aux sociétés désireuses de mettre en place un fonctionnement en méthode agile et facilite le travail des utilisateurs concernés dans leur organisation. Il permet notamment la création et la planification de tâches.
+
+# Solutions
+___
+> Organisation de type scrum
+Il permet le decoupage de projets en recits utilisateur.
+L'outils propose un systeme de tickets numerique, permettant à l'utilisateur déclarant l'incident d'alerter la bonne personne ou le bon service.
+___
+
+# Ticketting
+___
+
+![jira ticketting](https://f.hellowork.com/bdmtools/2019/12/jira-screenshot.png)
+
+# Sprint
+___
+![jira sprint](https://community.atlassian.com/t5/image/serverpage/image-id/64818i8C5F9F01E83C2FDF/image-dimensions/689x388?v=v2)
 
 
 
