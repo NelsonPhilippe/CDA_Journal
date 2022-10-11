@@ -2,6 +2,8 @@
 
 ## Journal de formation Concepteur d'Application (2022)
 
+---
+
 ## Table des matières
 
 1. [Les valeurs de la méthode agile](#vma)
@@ -126,20 +128,20 @@
 > Membre de l'équipe dont l'objectif principal est de la protéger des perturbations extérieures. Il est complètement transparent pour la communication entre l'équipe et les clients et n'a aucun pouvoir hiérarchique sur l'équipe. C'est en revanche un facilitateur pour les problèmes non techniques de l'équipe.
 
 
-### Méthodes de découpage
+### Product Backlog
 
-- __**Epic**__
+> Le Product Backlog est une liste de tâche ordonnée à réaliser, elle sert à définir les attentes des développeurs, faire un classement par priorité, et un suivie des tâches.
+> Le backlog prend en compte le principe d'**Epic** et de User Story.
+> 
+> - **Epic** : Une Epic est une tâche complexe qui peut être découpée en plusieurs User Story.
+> - **User Story** : Une User Story est une tâche simple qui peut être réalisée en une journée de travail.
+> 
+> Il prend aussi en compte la correction des bugs à faire et les dettes techniques.
+> 
+> - **Dettes techniques** : Une dette technique est une tâche qui n'est pas prioritaire mais qui doit être réalisée pour éviter des problèmes futurs.
+> 
+> ![Product Backlog](https://assets.asana.biz/transform/9a0eb346-33af-405d-9e6f-f63aad872c48/inline-project-management-product-backlog-1-fr-2x?io=transform:fill,width:1680&format=webp)
 
-> **Les epics** sont un moyen utile d'organiser votre travail sous une forme d'arborescente. L'idée de découper le tracail en morceaux livrables, pour réussir a terminer de gros projets en livrant tout au long de la valeur à vos clients. Les epics aident les équipes a découper leur travail tout en continuant à travailler vers un objectif plus grand.
-
-
-- __**User Story**__
-
-> **User story** est une explication non formelle, général d'une fonctionnalité logicielle écrite du point de vue de l'utilisateur final
-
-- __**Product backlog**__
-
-> **Product backlog** est une liste de toutes les fonctionnalités que l'on souhaite implémenter dans le produit. Il est composé de user story et d'epics.
 
 - __**Sprint backlog**__
 
