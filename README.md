@@ -14,14 +14,22 @@
 ## Les 4 valeurs de la méthode agile <a name="vma"></a>
 
   
-- **L'équipe**, soit des individus et des interactions, plutôt que des processus et des outils ;​
+- **L'équipe**
 
-- **L’application**, c'est-à-dire des fonctionnalités opérationnelles plutôt que de la documentation exhaustive ;​
+>  Des individus et des interactions, plutôt que des processus et des outils.
 
-- **La collaboration** avec le client, plutôt que la contractualisation des relations ;​
+- **L’application** 
 
-- **L’acceptation du changement**, plutôt que le suivi d'un plan.​
+> C'est-à-dire des fonctionnalités opérationnelles plutôt que de la documentation exhaustive
 
+- **La collaboration** 
+
+> avec le client, plutôt que la contractualisation des relations ;
+
+
+- **L’acceptation du changement**
+
+> Plutôt que le suivi d'un plan.
 
 ---
 
