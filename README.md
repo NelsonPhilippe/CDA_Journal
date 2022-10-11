@@ -14,11 +14,17 @@
 
 ## Table des matières
 
-1. [Les principes de la méthodes agile](#pma)
-2. [Les fondamentaux de la méthode agile](#fma) 
-3. [Le scrum](#scrum)
+1. [Les valeurs de la méthode agile](#vma)
+2. [Les principes de la méthodes agile](#pma)
+3. [Les fondamentaux de la méthode agile](#fma) 
+4. [Le scrum](#scrum)
 
 ### Semaine du 10/10
+
+## Les valeurs de la méthode agile <a name="vma"></a>
+
+- 
+
 
 ---
 
@@ -39,6 +45,9 @@
 
 
 ---
+
+
+
 ## Les fondamentaux de la méthode agile. <a name="fma"></a>
 
 ### Satifaire
