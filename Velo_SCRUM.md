@@ -61,4 +61,11 @@ Un sprint ne se limite pas à la livraison ou à la production. Il y a beaucoup 
 # Conclusion 
 
 La vélocité est une mesure importante utilisée par les Scrum Masters et les Product Owners pour suivre les progrès de leur équipe et assurer la réussite du projet. La réponse rapide, la livraison rapide, le cadre incrémentiel et itératif d'Agile garantissent des versions rapides, des produits de qualité et la satisfaction du client.
-La vélocité aide à déterminer les délais du projet et permet aux propriétaires de produits de donner des estimations précises sans tomber dans le piège du surengagement.
+La vélocité aide à déterminer les délais du projet et permet aux propriétaires de produits de donner des estimations précises sans tomber dans le piège du sur engagement.
+
+
+# Le Planing Poker
+*Qu'est-ce que le poker de planification ?*
+
+>Le planning poker, également connu sous le nom de "scrum poker" et de "pointing poker", est une technique ludique que les équipes de développement utilisent pour deviner l'effort des tâches de gestion de projet. Ces estimations sont basées sur l'apport et le consensus de l'ensemble du groupe, ce qui les rend plus engageantes et plus précises que d'autres méthodes. Pour aider à évaluer le nombre de story points pour les tâches pertinentes, les équipes utilisent des cartes de poker de planification, qui sont similaires aux cartes de poker.
+
