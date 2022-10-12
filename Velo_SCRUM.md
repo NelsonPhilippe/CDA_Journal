@@ -44,3 +44,21 @@ Un diagramme de vélocité est un excellent moyen de suivre l'état d'avancement
 - Feedback pour l'équipe : La vélocité est un excellent outil pour mesurer les progrès de l'équipe. En suivant la vélocité dans le temps, les équipes peuvent mesurer si les changements qu'elles font pendant le sprint améliorent ou diminuent leur productivité. Alors que la vélocité peut fluctuer dans les nouvelles équipes, les équipes expérimentées ont une vélocité constante et peuvent mesurer leurs progrès grâce aux graphiques de vélocité.
 - Prévision : La vélocité aide l'équipe à identifier le nombre de récits d'utilisateurs qu'elle peut réaliser dans un sprint. La prévision est un outil important qui aide les équipes à décider des délais et des budgets pour le projet.
 La prévision se fait généralement en prenant la moyenne de la vélocité des trois derniers sprints.
+#  Quels sont les inconvénients ?
+
+>Mesurer les progrès sur la base de la vélocité :
+Si la vélocité est un excellent outil pour mesurer la progression de l'équipe, il ne faut pas oublier qu'il s'agit d'une mesure empirique, ce qui signifie qu'elle peut être utilisée pour l'estimation, mais pas comme norme finale pour mesurer la progression de l'équipe. La vélocité est souvent basée sur les story points, qui sont subjectifs pour l'équipe. Les équipes peuvent avoir leurs propres valeurs de points d'histoire pour les histoires d'utilisateur et donc définir leur propre vélocité et portée du travail. La vélocité est donc une variable changeante qui ne doit pas être utilisée comme critère de mesure de la progression de l'équipe.
+
+- Problèmes de démarrage :
+La vélocité est mieux estimée par les équipes Scrum matures et bien rodées. Les équipes nouvelles ou en transition et les équipes qui se lancent dans de nouveaux projets auront besoin d'un certain temps pour devenir une machine bien huilée et obtenir une vélocité précise.
+
+- Des tâches importantes :
+Scrum/Agile fonctionne sur le principe de la décomposition de grands projets en petits morceaux et d'un produit livrable à la fin de chaque morceau. Un projet Scrum est généralement décomposé en épopées, sprints, user stories et tâches. Si les épopées ne sont pas suffisamment décomposées, cela aura un impact direct sur la vélocité, et les équipes peuvent voir une forte baisse de vélocité d'un sprint à l'autre. Cela rend la vélocité moins prévisible.
+
+- Le temps d'inactivité n'est pas comptabilisé :
+Un sprint ne se limite pas à la livraison ou à la production. Il y a beaucoup de choses qui se passent entre les deux, comme l'échange de courriels, les réunions de stand up, etc. Si ces éléments ne sont pas pris en compte dans la durée du sprint, la vélocité risque de faiblir.
+
+# Conclusion 
+
+La vélocité est une mesure importante utilisée par les Scrum Masters et les Product Owners pour suivre les progrès de leur équipe et assurer la réussite du projet. La réponse rapide, la livraison rapide, le cadre incrémentiel et itératif d'Agile garantissent des versions rapides, des produits de qualité et la satisfaction du client.
+La vélocité aide à déterminer les délais du projet et permet aux propriétaires de produits de donner des estimations précises sans tomber dans le piège du surengagement.
