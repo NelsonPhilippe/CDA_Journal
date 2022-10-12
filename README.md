@@ -97,7 +97,7 @@
 
 > Adaptation et amélioration de l'équipe <br />
 > Privilégier le contacte humain. <br />
-> &nbsp;&nbsp;&nbsp;&nbsp;Ex : L'envoie de mail ne retranscrit pas les sentiments réel d'une personne, le contacte humain facilite la compréhension. 
+> **Ex : L'envoie de mail ne retranscrit pas les sentiments réel d'une personne, le contacte humain facilite la compréhension.** <br />
 > Le contacte humain facilite la compréhension. <br />
 > Communication verbal et non verbal (communication face à face). <br />
 > Auto-responsabilisé les membres de l'équipe.
