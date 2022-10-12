@@ -76,7 +76,7 @@ Le planning poker, également connu sous le nom de "scrum poker" et de "pointing
 
 >La suite de Fibonacci est utilisée pour les évaluations. Comme nous cherchons un dimensionnement de l'effort, le message est clair : plus le scénario est gros, moins l'évaluation est précise. Le paquet de cartes utilisé pour le planning poker doit donc comporter les valeurs suivantes : 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144. Certains simplifient les grandes valeurs en les transformant en 20, 40, 100... puisqu'il s'agit d'être globalement bon plutôt que précisément erroné. On y ajoute généralement les valeurs 0 et 1/2.
 
-# Comment se déroule un Poker Planning .
+# Comment se déroule un Poker Planning
 ![](https://scrum-master.org/wp-content/uploads/elementor/thumbs/image-p9heaj9d5azmmgya3b4bub2zth9ug2yxj4gxgi8f1s.jpeg)
 Au début d'une session de planification du poker, le product owner ou le client examine une user story agile et la lit à haute voix. Une user story est une explication générale et informelle d'une fonctionnalité logicielle qui décrit comment elle offrira de la valeur à l'utilisateur final (c'est-à-dire le client).
 1. Distribuez les cartes aux participants
@@ -110,7 +110,7 @@ En général, les estimations commencent à converger après le deuxième tour. 
 # **Les avantages**
 - Selon une étude, les estimations issues du planning poker sont statistiquement plus élevées que les estimations individuelles. Il a également été noté que pour les mêmes tâches, les estimations du poker de planification étaient plus précises que les estimations individuelles.
 - Les autres avantages sont les suivants :
-	- Estimer les tâches les unes par rapport aux autres. Il est souvent difficile d'évaluer le temps nécessaire à la réalisation d'un projet,surtout lorsqu'il s'agit de la première fois. Le poker de planification permet aux équipes de se familiariser avec leur évaluation. Après avoir joué le jeu pendant un certain temps, vous finissez par construire une série de tâches qui servent de référence future pour la comparaison.
+	- Estimer les tâches les unes par rapport aux autres. Il est souvent difficile d'évaluer le temps nécessaire à la réalisation d'un projet, surtout lorsqu'il s'agit de la première fois. Le poker de planification permet aux équipes de se familiariser avec leur évaluation. Après avoir joué le jeu pendant un certain temps, vous finissez par construire une série de tâches qui servent de référence future pour la comparaison.
 	- Donner une voix égale à tous les membres de l'équipe. Il peut encourager les nouveaux employés à prendre la parole en jouant une carte et en expliquant leur logique. Par exemple, imaginez que vous faites une application de réservation de nourriture. Vous et votre collègue pourriez donner une estimation plus petite, comme 10 ou 15. En revanche, un nouvel employé pourrait donner une estimation de 100. Peut-être a-t-il eu l'expérience de la création d'une application similaire dans son dernier emploi et sait-il qu'une telle application prend beaucoup de temps, surtout par rapport aux autres.
 	- Identifier les lacunes dans les exigences et la mise en œuvre. Lorsque les participants divulguent leurs estimations, ils doivent les étayer en expliquant pourquoi elles sont élevées ou faibles. Cela peut susciter des questions sur les exigences et la mise en œuvre - une boucle de rétroaction qui permet de détecter les lacunes.
 
