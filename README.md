@@ -155,7 +155,7 @@
 
 - __**Sprint backlog**__
 
-> **Sprint backlog** est une liste des tâches à effectuer pour livrer une fonctionnalité.
+> **Sprint backlog** est une liste des tâches à effectuer pour livrer une fonctionnalité, une fois qu'un sprint est finis l'équipe définis les nouvelles tâches pour le prochain sprint.
 
 ---
 
@@ -184,6 +184,7 @@ ___
 ___
 
 ![jira ticketting](https://f.hellowork.com/bdmtools/2019/12/jira-screenshot.png)
+
 
 # Sprint
 ___
