@@ -114,7 +114,7 @@
 > Le scrum est une methode de travail simple permettant d'aborder des problématiques complexes, et les livrées de manière efficace.
 
 <div>
-<img src="images/scrum_schema.jpeg">
+<img src="../images/scrum_schema.jpeg">
 </div>
 
 ### Les roles
