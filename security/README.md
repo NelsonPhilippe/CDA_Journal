@@ -36,7 +36,7 @@ Le CORS (Cross-Origin Resource Sharing) est une fonctionnalité qui permet de d�
 
 ### CSP (Content Security Policy) <a name="csp"></a>
 
-Le CSP (Content Security Policy) est une fonctionnalité qui permet de définir des règles les resources accessible par un autre domaine.
+Le CSP (Content Security Policy) est une fonctionnalité qui permet de définir des règles les resources accessible ou executable par un navigateur, ce qui ne se trouve pas dans cette liste ne pourra être executé.
 
 ### SRI (Subresource Integrity) <a name="sri"></a>
 
