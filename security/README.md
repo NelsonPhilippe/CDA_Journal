@@ -12,7 +12,11 @@
     - [**XSS** (Cross-Site Scripting)](#xss)
     - [**SQLI** (SQL Injection)](#sqli)
 2. [**Stratégie de sécurité**](#strategie)
-   - [**CORS**](#cors)
+   - [**Liste des recommendations**](#recommendations)
+   - [**Les CORS**](#cors_r)
+   - [**Les CSP**](#csp_r)
+   - [**Les SRI**](#sri_r)
+   - [**HTTPS / TLS / HSTS**](#https_r)
 ---
 
 
@@ -57,12 +61,12 @@ Le SQLI (SQL Injection) est une attaque permettant d'injecter du code SQL lors d
 
 ## 2. Stratégie de sécurité <a name="strategie"></a>
 
-### Liste des recommendations
+### Liste des recommendations <a name="recommendations"></a>
 
 - **R1** : Mettre en œuvre TLS à l'état d'art
 - **R2** : Mettre en œuvre HSTS
 
-### CORS
+### Les CORS <a name="cors_r"></a>
 
 En premiers lieux, il sera important de contourner la sécurité par défaut (SOP) du navigateur en utilisant le CORS (Cross-Origin Resource Sharing) pour permettre l'acces à des ressources d'origines différentes.
 L'utilisation de CORS doit être suivie par un filtrage des resource externe utilisé par le site internet backend et front end.
@@ -74,20 +78,19 @@ Il est aussi possible que lors du développement, d'autre resource soit utilisé
 
 C'est pour cela qu'une liste blanche doit être mise en place.
 
-
-### CSP
+### CSP <a name="csp_r"></a>
 
 La mise en place des CSP est aussi une obligation, celui-ci doit être mis en place pour limiter les ressources executable par le navigateur.
 Aucun script externe ne doit pouvoir être chargé par celui-ci. Cela limitera la possibilité d'attaque XSS.
 
 Il faut prendre en compte que la plus pars des Frameworks utilisés met en places cette sécurité par défaut.
 
-### SRI
+### SRI <a name="sri_r"></a>
 
 La mise en place de SRI n'aura probablement pas lieux d'être, celle-ci sera uniquement mis en place si lors de la création de l'application, celle ci se doit d'utiliser des librairies externes.
 Cela nous permettra de vérifier l'authenticité des ressources et de limiter encore une fois la possibilité d'attaque XSS.
 
-### HTTPS / TLS / HSTS
+### HTTPS / TLS / HSTS <a name="https_r"></a>
 
 Le HTTPS est une obligation, celui-ci permet de sécuriser la communication entre le client et le serveur.
 Il est important de mettre en place un certificat SSL (TLS) valide pour sécuriser le trafique de donnée pour qu'il ne puisse être intercepté par un tiers. 
