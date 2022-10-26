@@ -11,12 +11,14 @@
     - [**CSRF** (Cross-Site Request Forgery)](#csrf)
     - [**XSS** (Cross-Site Scripting)](#xss)
     - [**SQLI** (SQL Injection)](#sqli)
+    - [**RBAC** (Role-Based Access Control)](#rbac)
 2. [**Stratégie de sécurité**](#strategie)
    - [**Liste des recommendations**](#recommendations)
    - [**Les CORS**](#cors_r)
    - [**Les CSP**](#csp_r)
    - [**Les SRI**](#sri_r)
    - [**HTTPS / TLS / HSTS**](#https_r)
+   - [**XSS (DOM)**](#xss_r)
 ---
 
 
@@ -73,7 +75,7 @@ L'utilisation de CORS doit être suivie par un filtrage des resource externe uti
 
 Pourquoi est-il important d'utiliser CORS ?
 
-La communication entre le back end et le front end ne pourrait pas être possible sans l'utilisation du CORS, le back et le front ne sera pas sur la même origin.
+La communication entre le back end et le front end ne pourrait pas être possible sans l'utilisation des CORS, le back et le front ne sera pas sur la même origin.
 Il est aussi possible que lors du développement, d'autre resource soit utilisé.
 
 C'est pour cela qu'une liste blanche doit être mise en place.
@@ -94,7 +96,7 @@ Cela nous permettra de vérifier l'authenticité des ressources et de limiter en
 
 Le HTTPS est une obligation, celui-ci permet de sécuriser la communication entre le client et le serveur.
 Il est important de mettre en place un certificat SSL (TLS) valide pour sécuriser le trafique de donnée pour qu'il ne puisse être intercepté par un tiers. 
-La mise en œuvre du certificat SSL s'accompagne de l'utilisation de HSTS (HTTP Strict Transport Security) qui permet de forcer le navigateur à utiliser le HTTPS.
+La mise en œuvre du certificat SSL !!!s'accompagne!!! de l'utilisation de HSTS (HTTP Strict Transport Security) qui permet de forcer le navigateur à utiliser le HTTPS.
 
 **Attention** : Une faille est présente lors de la première connexion à la page web avec la mise en œuvre HSTS, pour combler cette faille, il est possible de mettre en place une liste préchargée (HSTS preload) pour le rendre accessible uniquement en HTTPS.
 
