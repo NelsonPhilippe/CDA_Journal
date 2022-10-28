@@ -13,14 +13,15 @@
     - [**SQLI** (SQL Injection)](#sqli)
     - [**RBAC** (Role-Based Access Control)](#rbac)
 2. [**Stratégie de sécurité**](#strategie)
+   - [**Les trois grands principes**](#principes)
    - [**Liste des recommendations**](#recommendations)
-   - [**Les CORS**](#cors_r)
-   - [**Les CSP**](#csp_r)
-   - [**Les SRI**](#sri_r)
+   - [**Le CORS**](#cors_r)
+   - [**Le CSP**](#csp_r)
+   - [**Le SRI**](#sri_r)
    - [**HTTPS / TLS / HSTS**](#https_r)
-   - [**XSS (DOM)**](#xss_r)
+   - [**Les failles XSS**](#xss_r)
+   - [**Token**](#token_r)
 ---
-
 
 ## 1. Definition <a name="definition"></a>
 
@@ -63,6 +64,12 @@ Le SQLI (SQL Injection) est une attaque permettant d'injecter du code SQL lors d
 
 ## 2. Stratégie de sécurité <a name="strategie"></a>
 
+### Les trois grands principes <a name="principes"></a>
+
+- **Réduction de surface d'attaque** : Réduire au maximum la surface d'attaque pour exposer le moin de faille possible. 
+- **Defense en profondeur** : Protéger le système et chaque sous service.
+- **Moindres privilèges** : Donnée le moins de permission possible aux utilisateurs.
+
 ### Liste des recommendations <a name="recommendations"></a>
 
 - **R1** : Mettre en œuvre TLS à l'état d'art
@@ -95,12 +102,83 @@ Cela nous permettra de vérifier l'authenticité des ressources et de limiter en
 ### HTTPS / TLS / HSTS <a name="https_r"></a>
 
 Le HTTPS est une obligation, celui-ci permet de sécuriser la communication entre le client et le serveur.
-Il est important de mettre en place un certificat SSL (TLS) valide pour sécuriser le trafique de donnée pour qu'il ne puisse être intercepté par un tiers. 
-La mise en œuvre du certificat SSL !!!s'accompagne!!! de l'utilisation de HSTS (HTTP Strict Transport Security) qui permet de forcer le navigateur à utiliser le HTTPS.
+Il est important de mettre en place un certificat SSL (TLS) valide pour sécuriser le trafique de donnée pour qu'il ne puisse être intercepté par un tiers.
+La mise en œuvre du certificat SSL doit s'accompagner de l'utilisation de HSTS (HTTP Strict Transport Security) qui permet de forcer le navigateur à utiliser le HTTPS.
 
-**Attention** : Une faille est présente lors de la première connexion à la page web avec la mise en œuvre HSTS, pour combler cette faille, il est possible de mettre en place une liste préchargée (HSTS preload) pour le rendre accessible uniquement en HTTPS.
+La mise en place de ces dispositifs empêche l'attaque la plus connue "Man in the middle (L'homme du milieu)".
+
+> **Attention** : Une vulnérabilité est présente lors de la première connexion à la page web avec la mise en œuvre HSTS, pour combler cette faille, il est possible de mettre en place une liste préchargée (HSTS preload) pour le rendre accessible uniquement en HTTPS.
+
+### XSS 
+
+Comment se protéger et réduire les failles XSS ?
+
+Comme dit precedent, le CSP et le SRI participe à la réduction de possibilité d'attaque XSS, mais cela n'est pas suffisant, des règles de sécurités sur la façon de développé son application ont été mis en place.
+Il est important d'isoler son composant lors du development de son application, par exemple, les iframes dans la plus pars des cas se doivent d'etre isole pour eviler toute fuite de donnee.
+
+### WebStorage et IndexDB 
+
+LocalStorage : Stockage persistent des donnees
+SessionStorage : Stockage non persistent des donnees une fois l'onglet fermee.
+Cookies : Stockage persistent des donnees
+
+IndexDB : Stockage persistent des donnees
+
+La difference entre le webStorage et IndexDB est la performance, le webStorage est utile pour stocker de petite quantite de donnees contrairement a l'indexDB aui lui va permettre l'indexion de grande quantitee de donnees structure.
+
+Les cookies ne peuvent stocker que des chaines de characteres contrairement au localStorage aui lui permet de stocker different type de donnees.
 
 
+### Token
+
+Que ce que JWT ?
+
+Le JWT (Json Web Token) met en place un token unique, permettant generalement à authentifier un utilisateur pour les actions effectuer.
+Il est genere de facon a pouvoir enregistrer des donnes non regis par une politique de confidentialite.
+Il est possible de definir le hashage de son token et il faut mettre en place un sel.
 
 
+Pourquoi et comment utiliser et stocker un Token ?
 
+Il est important de generer un JWT pour maintenir une connexion utilisateur, sans ce JWT, l'utilisateur doit de nouveau se connecter a chaques actions pour verifier son indentite.
+
+Il est genere a partir d'une chaine de charactere et contient certaine donnee de l'utilisateur.
+
+> **Attention** : Il ne faut pas stocker de donne confidentielle dans ce token.
+
+Il y a plusieur solution pour stocker ce token ou d'utiliser se Token, pour le stockage il est recommender d'utiliser le IndexDB.
+
+### Gestion de donnee envoyee et recupere
+
+Lors de l'envoie et la recuperation de donnee, il est important de traiter la donnee (Sanitization) pour eviter l'injection de code et de creer des failles.
+
+#### Sanitization des donnees
+
+> Un exemple de traitememt pour une protection contre les attaques XSS, creer une fonction d'echappememt permettant de supprimer le code javascript dans une chaine de charctere.
+
+> Traitement de requete SQL, preparer une requete SQL avant de l'executer.
+
+
+#### Fetch & XMLHttpRequest
+
+Les fonctions Fetch et XMLHttpRequest permettent de creer des requete HTTP vers une autre origin, celle ci doit prevenir de potentielle attaque XSS.
+Il est conseiller d'utiliser Fetch, celui ci est plus flexible par l'utilisation des promise en Javascript.
+
+#### Les methodes
+
+GET : Uniquement des donnees publique.
+POST : Pas de preflight CORS
+PUT : Preflight CORS
+
+AntiCSRF chaine de caractere aleatoire jusquq 22 caracteres
+
+
+Requête HTTP : 
+
+option mode sur un fetch, 
+   - no-cors
+   - cors
+   - same-origin
+
+
+ 
