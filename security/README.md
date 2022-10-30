@@ -87,6 +87,10 @@ Il est aussi possible que lors du développement, d'autre resource soit utilisé
 
 C'est pour cela qu'une liste blanche doit être mise en place.
 
+### CSRF <a name="csrf_r"></a>
+
+
+
 ### CSP <a name="csp_r"></a>
 
 La mise en place des CSP est aussi une obligation, celui-ci doit être mis en place pour limiter les ressources executable par le navigateur.
@@ -128,6 +132,7 @@ La difference entre le webStorage et IndexDB est la performance, le webStorage e
 
 Les cookies ne peuvent stocker que des chaines de characteres contrairement au localStorage aui lui permet de stocker different type de donnees.
 
+<<<<<<< HEAD
 
 ### Token
 
@@ -136,6 +141,40 @@ Que ce que JWT ?
 Le JWT (Json Web Token) met en place un token unique, permettant generalement à authentifier un utilisateur pour les actions effectuer.
 Il est genere de facon a pouvoir enregistrer des donnes non regis par une politique de confidentialite.
 Il est possible de definir le hashage de son token et il faut mettre en place un sel.
+=======
+### SQLI <a name="sqli_r"></a>
+
+La mise en place d'une protection contre les attaques SQLI est une obligation, celle-ci permet de limiter les attaques SQLI.
+
+### Sanitization <a name="sanitization_r"></a>
+
+La sanitization lors de la reception ou de l'envoie de donnée est une obligation pour filtrer ce qui est envoyé et filtrer pour eviter toute injection.
+
+### WebStorage & IndexedDB <a name="webstorage_r"></a>
+
+La mise en place de WebStorage et IndexedDB est une obligation, celui-ci permet de stocker des données de manière sécurisée sur le navigateur de l'utilisateur.
+Le WebStorage va principalement permettre de stocker de la donnée légère.
+Le IndexedDB va permettre de stocker de la donnée plus lourde.
+
+La difference entre les Cookies et le LocalStorage principale va être le type de données stocker, les cookies seront des chaines de caractères, le LocalStorage va permettre de stocker tout type de données.
+
+### Session <a name="session_r"></a>
+
+La mise en place d'une session est une obligation, celle-ci permet de limiter les attaques CSRF.
+
+### Token / UUID <a name="token_r"></a>
+
+La mise en place d'un token est une obligation, celui-ci permet de limiter les attaques CSRF.
+L'UUID empêchera l'accès à des informations privées d'utilisateurs.
+
+### Password <a name="password_r"></a>
+
+### RBAC <a name="rbac_r"></a>
+
+## Confidentialité <a name="confidentialite"></a>
+
+## API Stateless & Stateful <a name="api"></a>
+>>>>>>> b6487d4 (docs(common) : add strat of security (WIP))
 
 
 Pourquoi et comment utiliser et stocker un Token ?

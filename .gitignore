@@ -1,7 +1,4 @@
 .idea
-<<<<<<< HEAD
 .vscode
 .DS_Store
-=======
-.vscode
->>>>>>> 21654a6 (add gitignore)
+
