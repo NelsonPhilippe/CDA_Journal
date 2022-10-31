@@ -22,13 +22,13 @@
 - [x] Defense en profondeur
 - [x] Réduction de surface d'attaque
 - [x] Moindre privilège
-- [ ] Sécurisation de l'API
+- [x] Sécurisation de l'API
 - [x] HTTPS / TLS / HSTS
 - [x] Sanitization
 - [x] Journalisation
 - [x] SHA-256
-- [ ] Stratégie de sauvegarde
-- [ ] RGPD
+- [x] Stratégie de sauvegarde
+- [x] RGPD
 - [x] Audit (PASSI)
 - [x] Bug Bounty
 - [x] SOP
