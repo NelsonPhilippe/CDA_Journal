@@ -181,7 +181,7 @@ Option de la méthode fetch :
 - no-cors
 - cors
 - same-origin
-- 
+
 ##### Les méthodes
 
 Lors de l'utilisation de requête HTTP, il est recommandé d'utiliser GET pour les données non confidentielles, il est aussi preferable d'utiliser PUT à POST, PUT permet l'utilisation d'un Preflight avec CORS.
