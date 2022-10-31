@@ -87,9 +87,6 @@ Il est aussi possible que lors du développement, d'autre resource soit utilisé
 
 C'est pour cela qu'une liste blanche doit être mise en place.
 
-### CSRF <a name="csrf_r"></a>
-
-
 
 ### CSP <a name="csp_r"></a>
 
@@ -98,7 +95,7 @@ Aucun script externe ne doit pouvoir être chargé par celui-ci. Cela limitera l
 
 Il faut prendre en compte que la plus pars des Frameworks utilisés met en places cette sécurité par défaut.
 
-### SRI <a name="sri_r"></a>
+### SRI <a name="sri_r"></a> 
 
 La mise en place de SRI n'aura probablement pas lieux d'être, celle-ci sera uniquement mis en place si lors de la création de l'application, celle ci se doit d'utiliser des librairies externes.
 Cela nous permettra de vérifier l'authenticité des ressources et de limiter encore une fois la possibilité d'attaque XSS.
@@ -132,16 +129,6 @@ La difference entre le webStorage et IndexDB est la performance, le webStorage e
 
 Les cookies ne peuvent stocker que des chaines de characteres contrairement au localStorage aui lui permet de stocker different type de donnees.
 
-<<<<<<< HEAD
-
-### Token
-
-Que ce que JWT ?
-
-Le JWT (Json Web Token) met en place un token unique, permettant generalement à authentifier un utilisateur pour les actions effectuer.
-Il est genere de facon a pouvoir enregistrer des donnes non regis par une politique de confidentialite.
-Il est possible de definir le hashage de son token et il faut mettre en place un sel.
-=======
 ### SQLI <a name="sqli_r"></a>
 
 La mise en place d'une protection contre les attaques SQLI est une obligation, celle-ci permet de limiter les attaques SQLI.
@@ -164,17 +151,28 @@ La mise en place d'une session est une obligation, celle-ci permet de limiter le
 
 ### Token / UUID <a name="token_r"></a>
 
-La mise en place d'un token est une obligation, celui-ci permet de limiter les attaques CSRF.
+La mise en place d'un token est une obligation, celui-ci permet de verifier l'authentification de l'utilisateur et ces authorizations.
+
 L'UUID empêchera l'accès à des informations privées d'utilisateurs.
+C'est une clé unique pour un utilisateur.
 
 ### Password <a name="password_r"></a>
 
+Pour les mots de passe, une politique a été mis en place par l'ANSII pour sécuriser ces dernier, les mots de passe doivent contenir au moins 8 caractère, il ne doit pas être stocker en claire dans la base de données, c'est à dire qu'il doit subir un Hashage puis un Salage avant d'être stocker.
+La clé de salage de ne doit pas être connu par le publique.
+
 ### RBAC <a name="rbac_r"></a>
+
+L'api doit avoir le moin d'authorisation possible, il doit pouvoir executer que ce qu'il a besoin.
+Par exemple, l'api ne doit pas pouvoir avoir un acces root à la base de données, si une faille est decouverte, l'attaquant aurai un total controle sur la base de données.
+
+L'utilisateur doit de même n'avoir qu'acces au fonctionnalité utile, ne jamais faire confiance aux utilisateurs.
 
 ## Confidentialité <a name="confidentialite"></a>
 
+La politique de confidentialité oblige l'application à prévenir les utilisateurs des données qui vont être stocker et utiliser, l'utilisateur doit aussi pouvoir modifier ou supprimer toute donnée le concernant.
+
 ## API Stateless & Stateful <a name="api"></a>
->>>>>>> b6487d4 (docs(common) : add strat of security (WIP))
 
 
 Pourquoi et comment utiliser et stocker un Token ?
@@ -203,21 +201,27 @@ Lors de l'envoie et la recuperation de donnee, il est important de traiter la do
 Les fonctions Fetch et XMLHttpRequest permettent de creer des requete HTTP vers une autre origin, celle ci doit prevenir de potentielle attaque XSS.
 Il est conseiller d'utiliser Fetch, celui ci est plus flexible par l'utilisation des promise en Javascript.
 
+L'utilisation de Fetch permettra d'eviter les attaques CSRF.
+
+Option sur un fetch : 
+   - no-cors
+   - cors
+   - same-origin
+
+
 #### Les methodes
+
+Lors de l'utilisation de requetes HTTP, il est recommendé d'utiliser GET pour les données non confidentiels, il est aussi preferable d'utiliser PUT à POST, PUT permet l'utilisation d'un Preflight avec CORS.
+
+Le preflight permet de ne pas envoyer de requête si il n'y a aucune réponse.
 
 GET : Uniquement des donnees publique.
 POST : Pas de preflight CORS
 PUT : Preflight CORS
 
-AntiCSRF chaine de caractere aleatoire jusquq 22 caracteres
 
 
-Requête HTTP : 
 
-option mode sur un fetch, 
-   - no-cors
-   - cors
-   - same-origin
 
 
  
