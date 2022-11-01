@@ -211,6 +211,18 @@ Comme dit precedent, le CSP et le SRI participe à la réduction de possibilité
 
 Il est important d'isoler ses composants lors du development de son application, par exemple, les iframes dans la plupart des cas doivent être isolée pour éviter toutes fuites de données.
 
+Les principales types d'attaques XSS : 
+
+- Stored XSS : L'attaque est stockée dans la base de données, elle est donc réutilisée à chaque fois que la page est chargé.
+- Reflected XSS : L'attaque est envoyée par le client, elle est donc réutilisée à chaque fois que la page est chargé.
+- DOM Based XSS : L'attaque est envoyée par le client, elle est donc réutilisée à chaque fois que la page est chargé.
+
+Les attaques les plus courantes : 
+
+- Requêtes Silencieuse : Moyen d'envoyer une requête sans que l'utilisateur s'en rende compte.
+- Click-jacking : Détournement de clics permettant de faire des actions sans le consentement de l'utilisateur.
+
+
 - #### SQLI
 
 La mise en place d'une protection contre les attaques SQLI est une obligation. Il est possible de se protéger en utilisant des ORM (Object Relational Mapping).
@@ -297,11 +309,15 @@ La difference entre le webStorage et IndexDB est la performance, le webStorage e
 
 Les cookies ne peuvent stocker que des chaines de caractères contrairement au localStorage qui lui permet de stocker different type de donnees.
 
+> **Attention** : Les cookies ne sont pas infallible, il existe des attaques de classes CSRF permettant de récupérer les informations contenues dans ces derniers.
+> Il en est de même pour le localStorage, il est donc indispensable de ne pas stocker des informations sensibles dans ces moyens de stockage.
+
 - #### Token / UUID
 
-La mise en place d'un token est une obligation, celui-ci permet de verifier l'authentification de l'utilisateur et ces authorizations.
+La mise en place d'un token est une obligation, celui-ci permet de verifier l'authentification de l'utilisateur et ces authorisations.
 
-L'UUID empêchera l'accès à des informations privées d'utilisateurs, il doit remplacer l'indexation de la base de données par défaut. Cette clé est unique par utilisateur.
+L'UUID empêchera l'accès à des informations privées d'utilisateurs, il doit remplacer l'indexions de la base de données par défaut. Cette clé est unique par utilisateur.
+L'UUID permettra l'isolation des différentes données d'un utilisateur, c'est une protection en plus de la session.
 
 ---
 
