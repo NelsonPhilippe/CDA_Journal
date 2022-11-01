@@ -1,13 +1,9 @@
-# CDA_Journal
-
-## Journal de formation Concepteur d'Application (2022)
-
----
+# La méthode Agile
 
 ## Table des matières
 
 1. [Les valeurs de la méthode agile](#vma)
-2. [Les principes de la méthodes agile](#pma)
+2. [Les principes de la méthode agile](#pma)
 3. [Les fondamentaux de la méthode agile](#fma) 
 4. [Le scrum](#scrum)
 
@@ -26,7 +22,7 @@
 
 - **La collaboration** 
 
-> avec le client, plutôt que la contractualisation des relations ;
+> La collaboration avec le client, plutôt que la contractualisation des relations ;
 
 
 - **L’acceptation du changement**
@@ -38,17 +34,17 @@
 ## Les principes de la méthode agile <a name="pma"></a>
 
 - Satisfaire le client avec un produit de qualité et de nécessité
-- Accueillir  favorablement les demandes de changements
+- Accueillir favorablement les demandes de changements
 - Mise à jour fonctionnelle fréquente
 - Collaboration quotidienne dev et client
 - Satisfaire les demandes des collaborateurs et créer un lien de confiance 
 - Communication face à face
 - Priorisé la continuité face à la nouveauté
-- Faire avancé le projet avec un rythme constant
+- Faire avancer le projet avec un rythme constant
 - Rigueur technique et conception avancée qui renforce l’agilité
 - Minimiser le superflu pour se concentrer sur l’essentiel
 - Auto-responsabilité des membres de l’équipe
-- Adaptation des comportement et du travail dans l’équipe régulièrement après debrief
+- Adaptation du comportement et du travail dans l’équipe régulièrement après debrief
 
 
 ---
