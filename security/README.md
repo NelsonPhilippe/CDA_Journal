@@ -43,19 +43,21 @@ Exemple :
 
 ### - SOP (Same Origin Policy) <a name="sop"></a>
 
-La SOP (Same Origin Policy) est une politique de sécurisation des données, c'est une fonction par défaut du navigateur permettant de limiter l'accès au resources de la même Origin.
+Le SOP (Same Origin Policy) est une politique de même Origin, c'est une fonction par défaut du navigateur permettant de limiter l'accès au resources de l'Origin.
+Le SOP permet d'envoyer des requêtes HTTP mais ne permet pas de recevoir de réponse si celle-ci ne provient pas de la même Origin.
+Si le SOP n'est pas contourné, aucune origine ne peut communiquer avec celle-ci.
 
 ### - CORS (Cross-Origin Resource Sharing) <a name="cors"></a>
 
-Les CORS (Cross-Origin Resource Sharing) est une fonctionnalité qui permet de définir des règles d'acces à des ressources d'origines différentes.
+Les CORS (Cross-Origin Resource Sharing) partage de ressources entre différentes origin, est une fonctionnalité qui permet de contourner le SOP, celui-ci va permettre la communication entre les différentes origin.
 
 ### - CSP (Content Security Policy) <a name="csp"></a>
 
-Les CSP (Content Security Policy) est une fonctionnalité qui permet de définir des règles les resources accessible ou executable par un navigateur, ce qui ne se trouve pas dans cette liste ne pourra être executé.
+Les CSP (Content Security Policy) est une fonctionnalité qui permet de définir des règles des ressources executable par un navigateur, ce qui ne se trouve pas dans cette liste ne pourra être exécuté.
 
 ### - SRI (Subresource Integrity) <a name="sri"></a>
 
-Le SRI (Subresource Integrity) est une fonctionnalité qui permet de vérifier l'intégrité des ressources chargées par le navigateur.
+Le SRI (Subresource Integrity) est une fonctionnalité qui permet de vérifier l'intégrité des ressources chargées par le navigateur via un hash de la ressource en question.
 
 ### - CSRF (Cross-Site Request Forgery) <a name="csrf"></a>
 
@@ -246,7 +248,7 @@ L'utilisateur doit donner son consentement pour que ses données soient utilisé
 
 #### Confidentialité 
 
-La politique de confidentialité oblige l'application à prévenir les utilisateurs des données qui vont être stocker et utiliser, l'utilisateur doit aussi pouvoir modifier ou supprimer toute donnée le concernant.
+La politique de confidentialité oblige l'application à prévenir les utilisateurs des données qui vont être stocké et utilisé, l'utilisateur doit aussi pouvoir modifier ou supprimer toute donnée le concernant.
 
 ---
 
