@@ -86,8 +86,42 @@ Le SQLI (SQL Injection) est une attaque permettant d'injecter du code SQL lors d
 
 ### Liste des recommendations <a name="recommendations"></a>
 
+#### Recommendations pour la mise en œuvre d'un site web
+
 - **R1** : Mettre en œuvre TLS à l'état d'art
 - **R2** : Mettre en œuvre HSTS
+- **R3** : Surveiller les CT logs
+- **R4** : Utiliser l'API DOM à bon escient
+- **R7** : Vérifier l'échappement des contenus inclus
+- **R8** : Vérifier la conformité des ressources inclus
+- **R9** : Proscrire l'usage de la fonction eval()
+- **R10** : Proscrire l'usage de constructions basées sur l'évaluation du code.
+- **R11** : Contrôler l'intégrité des contenus internes.
+- **R12** : Contrôler l'intégrité des contenus tiers.
+- **R13** : Restreindre les contenus aux ressources fiables.
+- **R14** : Mettre en œuvre CSP par en-tête HTTP.
+- **R15** : Interdire les contenus __inline__.
+- **R16** : Définir la directive __default-src__.
+- **R17** : Utiliser CSP contre le clickjacking.
+- **R20** : Réduire l'impacte des requêtes silencieuses via CSP.
+- **R23** : Ne pas stocker des informations sensibles dans les bases de données locales.
+- **R24** : Ne pas stocker des informations sensibles dans les bases de données IndexDB.
+- **R25** : Proscrire l'usage de l'API Web SQL Database.
+- **R26** : Ne pas stocker d'informations sensibles dans les cookies.
+- **R27** : Cloisonner les sessions aux moyens de nom de domaine distincts.
+- **R29** : Maîtriser l'accès aux cookies en Javascript.
+- **R31** : Limiter le transit des cookies aux flux sécurisés.
+- **R32** : Définir une stratégie stricte d'envoi des cookies en cross-site.
+- **R33** : Définir une stratégie stricte d'envoi des cookies de session en cross-site.
+- **R35** : Choisir une API selon la méthode HTTP.
+- **R36+** : Utiliser XHR avec la méthode PUT.
+- **R37** : Compléter la mise en œuvre de XHR par une configuration CSP.
+- **R38** : Protéger les appels XHR par un contrôle anti-CSRF.
+- **R39** : Mettre en œuvre un preflight lors des appels CORS.
+- **R40** : Vérifier la valeur de l'Origin lors de la réception d'une requête CORS.
+- **R41** : Cloisonner les services web au moyen de noms de domaine distincts.
+- **R42** : Eviter l'usage de bibliothèques publiques effectuant des appels CORS.
+- **R44** : Préférer l'utilisation de l'API Fetch à XMLHttpRequest.
 
 ### La sécurité inter-domaine <a name="inter-domaines_r"></a>
 
