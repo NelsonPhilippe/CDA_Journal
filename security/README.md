@@ -1,20 +1,22 @@
 # Stratégie de sécurité
 
---- 
+---
 
 ## Table des matières
 
+
 1. [**Definition**](#definition)
-    - [**Origin**](#origin)
-    - [**SOP** (Same Origin Policy)](#sop)
-    - [**CORS** (Cross-Origin Resource Sharing)](#cors)
-    - [**CSP** (Content Security Policy)](#csp)
-    - [**SRI** (Subresource Integrity)](#sri)
-    - [**CSRF** (Cross-Site Request Forgery)](#csrf)
-    - [**XSS** (Cross-Site Scripting)](#xss)
-    - [**SQLI** (SQL Injection)](#sqli)
-    - [**RBAC** (Role-Based Access Control)](#rbac)
+   - [**Origin**](#origin)
+   - [**SOP** (Same Origin Policy)](#sop)
+   - [**CORS** (Cross-Origin Resource Sharing)](#cors)
+   - [**CSP** (Content Security Policy)](#csp)
+   - [**SRI** (Subresource Integrity)](#sri)
+   - [**CSRF** (Cross-Site Request Forgery)](#csrf)
+   - [**XSS** (Cross-Site Scripting)](#xss)
+   - [**SQLI** (SQL Injection)](#sqli)
+   - [**RBAC** (Role-Based Access Control)](#rbac)
 2. [**Stratégie de sécurité**](#strategie)
+   - [**Contexte**](#contexte)
    - [**Les trois grands principes**](#principes)
    - [**Liste des recommendations**](#recommendations)
    - [**La sécurité inter-domaines**](#inter-domaines_r)
@@ -28,6 +30,7 @@
    - [**Stratégie de sauvegarde**](#backup_r)
    - [**Bug Bounty et Audit**](#bug_r)
    - [**Journalisation**](#journalisation_r)
+
 ---
 
 ## 1. Definition <a name="definition"></a>
@@ -36,7 +39,7 @@
 
 L'origin défini le nom de domaine de la page sur laquelle on se trouve
 
-Exemple : 
+Exemple :
 
     - https://www.google.com (origin = google.com)
     - https://www.google.com/search?q=hello (origin = google.com)
@@ -78,54 +81,106 @@ Le SQLI (SQL Injection) est une attaque permettant d'injecter du code SQL lors d
 > Cette stratégie de sécurité se base sur les recommendations de l'ANSII (American National Standards Institute) et OWASP (Open Web Application Security Project).
 > Certaines explications sont aussi tirées du site Redhat.
 
+### Contexte <a name="contexte"></a>
+
+Cette stratégie fait suite à la demande de la mission locale de la ville de Valenciennes, cette demande aura pour but de faire une refonte complète du site web de la mission locale.
+
 ### Les trois grands principes <a name="principes"></a>
 
-- **Réduction de surface d'attaque** : Réduire au maximum la surface d'attaque pour exposer le moin de faille possible. 
+- **Réduction de surface d'attaque** : Réduire au maximum la surface d'attaque pour exposer le moin de faille possible.
 - **Defense en profondeur** : Protéger le système et chaque sous service.
 - **Moindres privilèges** : Donnée le moins de permission possible aux utilisateurs.
 
 ### Liste des recommendations <a name="recommendations"></a>
 
-#### Recommendations pour la mise en œuvre d'un site web
+- #### Recommendations pour la mise en œuvre d'un site web
 
-- **R1** : Mettre en œuvre TLS à l'état d'art
-- **R2** : Mettre en œuvre HSTS
-- **R3** : Surveiller les CT logs
-- **R4** : Utiliser l'API DOM à bon escient
-- **R7** : Vérifier l'échappement des contenus inclus
-- **R8** : Vérifier la conformité des ressources inclus
-- **R9** : Proscrire l'usage de la fonction eval()
-- **R10** : Proscrire l'usage de constructions basées sur l'évaluation du code.
-- **R11** : Contrôler l'intégrité des contenus internes.
-- **R12** : Contrôler l'intégrité des contenus tiers.
-- **R13** : Restreindre les contenus aux ressources fiables.
-- **R14** : Mettre en œuvre CSP par en-tête HTTP.
-- **R15** : Interdire les contenus __inline__.
-- **R16** : Définir la directive __default-src__.
-- **R17** : Utiliser CSP contre le clickjacking.
-- **R20** : Réduire l'impacte des requêtes silencieuses via CSP.
-- **R23** : Ne pas stocker des informations sensibles dans les bases de données locales.
-- **R24** : Ne pas stocker des informations sensibles dans les bases de données IndexDB.
-- **R25** : Proscrire l'usage de l'API Web SQL Database.
-- **R26** : Ne pas stocker d'informations sensibles dans les cookies.
-- **R27** : Cloisonner les sessions aux moyens de nom de domaine distincts.
-- **R29** : Maîtriser l'accès aux cookies en Javascript.
-- **R31** : Limiter le transit des cookies aux flux sécurisés.
-- **R32** : Définir une stratégie stricte d'envoi des cookies en cross-site.
-- **R33** : Définir une stratégie stricte d'envoi des cookies de session en cross-site.
-- **R35** : Choisir une API selon la méthode HTTP.
-- **R36+** : Utiliser XHR avec la méthode PUT.
-- **R37** : Compléter la mise en œuvre de XHR par une configuration CSP.
-- **R38** : Protéger les appels XHR par un contrôle anti-CSRF.
-- **R39** : Mettre en œuvre un preflight lors des appels CORS.
-- **R40** : Vérifier la valeur de l'Origin lors de la réception d'une requête CORS.
-- **R41** : Cloisonner les services web au moyen de noms de domaine distincts.
-- **R42** : Eviter l'usage de bibliothèques publiques effectuant des appels CORS.
-- **R44** : Préférer l'utilisation de l'API Fetch à XMLHttpRequest.
+  - **R1** : Mettre en œuvre TLS à l'état d'art
+  - **R2** : Mettre en œuvre HSTS
+  - **R3** : Surveiller les CT logs
+  - **R4** : Utiliser l'API DOM à bon escient
+  - **R7** : Vérifier l'échappement des contenus inclus
+  - **R8** : Vérifier la conformité des ressources inclus
+  - **R9** : Proscrire l'usage de la fonction eval()
+  - **R10** : Proscrire l'usage de constructions basées sur l'évaluation du code.
+  - **R11** : Contrôler l'intégrité des contenus internes.
+  - **R12** : Contrôler l'intégrité des contenus tiers.
+  - **R13** : Restreindre les contenus aux ressources fiables.
+  - **R14** : Mettre en œuvre CSP par en-tête HTTP.
+  - **R15** : Interdire les contenus __inline__.
+  - **R16** : Définir la directive __default-src__.
+  - **R17** : Utiliser CSP contre le clickjacking.
+  - **R20** : Réduire l'impacte des requêtes silencieuses via CSP.
+  - **R23** : Ne pas stocker des informations sensibles dans les bases de données locales.
+  - **R24** : Ne pas stocker des informations sensibles dans les bases de données IndexDB.
+  - **R25** : Proscrire l'usage de l'API Web SQL Database.
+  - **R26** : Ne pas stocker d'informations sensibles dans les cookies.
+  - **R27** : Cloisonner les sessions aux moyens de nom de domaine distincts.
+  - **R29** : Maîtriser l'accès aux cookies en Javascript.
+  - **R31** : Limiter le transit des cookies aux flux sécurisés.
+  - **R32** : Définir une stratégie stricte d'envoi des cookies en cross-site.
+  - **R33** : Définir une stratégie stricte d'envoi des cookies de session en cross-site.
+  - **R35** : Choisir une API selon la méthode HTTP.
+  - **R36+** : Utiliser XHR avec la méthode PUT.
+  - **R37** : Compléter la mise en œuvre de XHR par une configuration CSP.
+  - **R38** : Protéger les appels XHR par un contrôle anti-CSRF.
+  - **R39** : Mettre en œuvre un preflight lors des appels CORS.
+  - **R40** : Vérifier la valeur de l'Origin lors de la réception d'une requête CORS.
+  - **R41** : Cloisonner les services web au moyen de noms de domaine distincts.
+  - **R42** : Eviter l'usage de bibliothèques publiques effectuant des appels CORS.
+  - **R44** : Préférer l'utilisation de l'API Fetch à XMLHttpRequest.
+  - **R47** : Utiliser le mode strict.
+  - **R48+** : Isoler le traitement par WebWorker et Origin " data : ".
+  - **R49** : Formaliser les échanges en utilisant l'API de Message.
+  - **R50** : Cloisonner les traitements dans des iframes.
+  - **R51** : Cloisonner les traitements avec une sandbox.
+  - **R52+** : Cloisonner les traitements par une iframes sur une seconde origine.
+  - **R57** : Proscrire l'écriture de document.domain
+  - **R58** : Proscrire l'usage de JSON-P.
+  - **R59** : Définir des profils de déploiement spécifiques aux contextes.
+  - **R60** : Empêcher le déploiement d'un profil non adapté au contexte.
+  - **R61** : Limiter les composants logiciels tiers.
+  - **R62** : Maintenir à jour les composants logiciels tiers utilisés.
+  - **R63** : Ne pas modifier le cœur des composants logiciels tiers.
+
+> Beaucoup de ces recommendations permettrons de limiter les attaques CSRF / XSS ... </br>
+> Les principes fondamentales de ces recommendations sont : </br>
+>
+> - Cloisonner les différents services web </br>
+> - Limiter les permissions des utilisateurs </br>
+> - Limiter les permissions des applications </br>
+> - Limiter les permissions des composants logiciels tiers </br>
+> - Limiter les permissions des navigateurs </br>
+
+
+- #### Recommendations relatives à l'authentification multifacteur et aux mots de passe
+
+   - **R2** : Privilégier l’utilisation de moyens d’authentification forts.
+   - **R3** : Conduire une analyse de risque.
+   - **R6** : Remettre les facteurs d’authentification au travers de canaux sécurisés.
+   - **R10** : Limiter dans le temps le nombre de tentatives d’authentification.
+   - **R11** : Réaliser l’authentification au travers d’un canal sécurisé.
+   - **R12** : Limiter la durée de validité d’une session authentifiée.
+   - **R13** : Protéger les données d’authentification stockées par le vérifieur.
+   - **R14** : Ne pas donner d’information sur l’échec de l’authentification.
+   - **R17** : Sensibiliser les utilisateurs à la sécurité de l’authentification.
+   - **R20** : Mettre en place une politique de sécurité des mots de passe.
+   - **R21** : Imposer une longueur minimale pour les mots de passe.
+   - **R22** : Ne pas imposer de longueur maximale pour les mots de passe.
+   - **R23** :  Mettre en œuvre des règles sur la complexité des mots de passe.
+   - **R24** : Ne pas imposer par défaut de délai d’expiration sur les mots de passe des comptes non
+     sensibles.
+   - **R26** : Révoquer immédiatement les mots de passe en cas de compromission suspectée ou avérée.
+   - **R27** : Mettre en place un contrôle de la robustesse des mots de passe lors de leur création ou de
+     leur renouvellement.
+   - **R28** : Utiliser un sel aléatoire long.
+   - **R30** : Proposer une méthode de recouvrement d’accès.
+   
+> Ces recommendations touchent aà l'authentification de l'utilisateur et à la gestion des mots de passes.
 
 ### La sécurité inter-domaine <a name="inter-domaines_r"></a>
 
-#### CORS
+- #### CORS
 
 En premiers lieux, il sera important de contourner la sécurité par défaut (SOP) du navigateur en utilisant le CORS (Cross-Origin Resource Sharing) pour permettre l'accès à des ressources d'origines différentes.
 L'utilisation de CORS doit être suivie par un filtrage des resources externes utilisé par le site internet backend et front end.
@@ -141,15 +196,14 @@ C'est pour cela qu'une liste blanche doit être mise en place.
 
 ### Les classes et failles de sécurités <a name="classes"></a>
 
-#### CSRF
+- #### CSRF
 
 Comment se protéger des failles CSRF ?
 
 Il est possible de se protéger des failles CSRF en utilisant un token CSRF, ce token est généré par le serveur et envoyé au client lors de la connexion.
 Ce token est ensuite utilisé pour valider les requêtes POST, PUT, DELETE, etc.
 
-
-#### XSS
+- #### XSS
 
 Comment se protéger et réduire les failles XSS ?
 
@@ -157,7 +211,7 @@ Comme dit precedent, le CSP et le SRI participe à la réduction de possibilité
 
 Il est important d'isoler ses composants lors du development de son application, par exemple, les iframes dans la plupart des cas doivent être isolée pour éviter toutes fuites de données.
 
-#### SQLI
+- #### SQLI
 
 La mise en place d'une protection contre les attaques SQLI est une obligation. Il est possible de se protéger en utilisant des ORM (Object Relational Mapping).
 
@@ -168,16 +222,16 @@ La mise en place d'une protection contre les attaques SQLI est une obligation. I
 
 ### Authenticité des ressources <a name="authenticite_r"></a>
 
-#### CSP
+- #### CSP
 
 La mise en place des CSP est aussi une obligation, celui-ci doit être mis en place pour limiter les ressources executable par le navigateur.
 Aucun script externe ne doit pouvoir être chargé par celui-ci. Cela limitera la possibilité d'attaques XSS et CSRF.
 
-Le CSP doit aussi être mis en place lors de l'utilisation de requête XHR, il permettra de limiter les risques d'exfiltrations de données si l'attaquant parvient à remplacer les XHR par des appels CORS valides. 
+Le CSP doit aussi être mis en place lors de l'utilisation de requête XHR, il permettra de limiter les risques d'exfiltrations de données si l'attaquant parvient à remplacer les XHR par des appels CORS valides.
 
 Cette option est configurée par défaut par la plus pars des Frameworks.
 
-#### SRI
+- #### SRI
 
 La mise en place de SRI n'aura probablement pas lieux d'être, celle-ci sera uniquement mise en place si elle doit utiliser des librairies externes.
 Cela nous permettra de vérifier l'authenticité des ressources et de limiter possibilité d'attaque XSS.
@@ -186,7 +240,7 @@ Cela nous permettra de vérifier l'authenticité des ressources et de limiter po
 
 ### Sécurisation du trafic de données <a name="securisation_r"></a>
 
-#### HTTPS / TLS / HSTS
+- #### HTTPS / TLS / HSTS
 
 Le HTTPS est une obligation, celui-ci permet de sécuriser la communication entre le client et le serveur.
 Il est important de mettre en place un certificat SSL (TLS) valide pour sécuriser le trafique de données pour qu'il ne puisse être intercepté par un tiers.
@@ -196,8 +250,7 @@ La mise en place de ces dispositifs empêche l'attaque la plus connue "Man in th
 
 > **Attention** : Une vulnérabilité est présente lors de la première connexion à la page web avec la mise en œuvre HSTS, pour combler cette faille, il est possible de mettre en place une liste préchargée (HSTS preload) pour le rendre accessible uniquement en HTTPS.
 
-
-#### Sanitization des données
+- #### Sanitization des données
 
 La sanitization permet la validation des données entrantes et sortantes, cela permet de s'assurer que les données sont bien de type attendu et qu'elles ne contiennent pas de tentative d'injection de code.
 
@@ -205,8 +258,7 @@ La sanitization permet la validation des données entrantes et sortantes, cela p
 
 > Pour traiter une requête SQL il faut la preparer avant de l'exécuter. La préparation permet de vérifier que les données sont bien de type attendu et de les échapper si nécessaire.
 
-
-#### Fetch & XMLHttpRequest
+- #### Fetch & XMLHttpRequest
 
 Les fonctions Fetch et XMLHttpRequest permettent de créer des requètes HTTP vers une autre origin, celle-ci doit prévenir de potentielles attaques XSS.
 Il est conseiller d'utiliser Fetch, celui-ci est plus flexible par l'utilisation des promises en Javascript.
@@ -214,6 +266,7 @@ Il est conseiller d'utiliser Fetch, celui-ci est plus flexible par l'utilisation
 L'utilisation de Fetch permettra d'éviter les attaques CSRF.
 
 Option de la méthode fetch :
+
 - no-cors
 - cors
 - same-origin
@@ -232,7 +285,7 @@ Le preflight permet de ne pas envoyer de requête s'il n'y a aucune réponse.
 
 ### Le stockage de données côté client <a name="storage_r"></a>
 
-#### WebStorage et IndexDB 
+- #### WebStorage et IndexDB
 
 LocalStorage : Stockage persistent des donnees
 SessionStorage : Stockage non persistent des donnees une fois l'onglet fermés.
@@ -244,7 +297,7 @@ La difference entre le webStorage et IndexDB est la performance, le webStorage e
 
 Les cookies ne peuvent stocker que des chaines de caractères contrairement au localStorage qui lui permet de stocker different type de donnees.
 
-#### Token / UUID
+- #### Token / UUID
 
 La mise en place d'un token est une obligation, celui-ci permet de verifier l'authentification de l'utilisateur et ces authorizations.
 
@@ -254,12 +307,12 @@ L'UUID empêchera l'accès à des informations privées d'utilisateurs, il doit 
 
 ### Authentification <a name="auth_r"></a>
 
-#### Password 
+- #### Mots de passes
 
 Pour les mots de passe, une politique a été mis en place par l'ANSII pour sécuriser ces derniers, les mots de passe doivent contenir au moins 8 caractères, il ne doit pas être stocké en claire dans la base de données, c'est-à-dire qu'il doit subir un hashage puis un Salage avant d'être stocké.
 La clé de salage de ne doit pas être connue par la publique. Il est fortement recommender de hasher le mot de passe en SHA256.
 
-#### Session
+- #### Session
 
 La mise en place d'une session est une obligation, celle-ci permet de limiter les attaques CSRF en premiers lieux.
 La session peut être stockée côté client ou côté serveur, il est important de limiter l'expiration de la session pour éviter les attaques de type session fixation.
@@ -276,19 +329,19 @@ La clé de session doit être unique et aléatoire, elle doit être générée p
 
 ### RGPD <a name="rgpd_r"></a>
 
-#### Consentement 
+- #### Consentement
 
-L'utilisateur doit donner son consentement pour que ses données soient utilisées, il doit être informé de l'utilisation de ses données et de la manière dont elles seront utilisées.
+L'utilisateur doit donner son consentement pour que ses données soient utilisées, il doit être informé de l'utilisation de ses données et de la manière dont elles seront utilisées, l'utilisateur doit pouvoir modifier ou supprimer toute donnée le concernant.
 
-#### Confidentialité 
+- #### Confidentialité
 
-La politique de confidentialité oblige l'application à prévenir les utilisateurs des données qui vont être stocké et utilisé, l'utilisateur doit aussi pouvoir modifier ou supprimer toute donnée le concernant.
+La politique de confidentialité oblige l'application à tout faire pour garder les informations de l'utilisateur privés selon les accords prévu lors du consentement de celui-ci.
 
 ---
 
 ### Sécurisation de l'API <a name="api_r"></a>
 
-#### RBAC
+- #### RBAC
 
 L'api doit avoir le moin d'authorisation possible, il doit pouvoir execute que ce qu'il a besoin.
 Par exemple, l'api ne doit pas pouvoir avoir un accès root à la base de données, si une faille est découverte, l'attaquant aurait un total contrôle sur la base de données.
@@ -296,7 +349,7 @@ Par exemple, l'api ne doit pas pouvoir avoir un accès root à la base de donné
 L'utilisateur doit de même n'avoir qu'accès aux fonctionnalités utile, ne jamais faire confiance aux utilisateurs.
 
 
-#### API Stateless & Stateful
+-  #### API Stateless & Stateful
 
 Une API Stateless est une API qui ne conserve pas d'état, elle ne conserve pas les informations de l'utilisateur, elle ne conserve que les informations de la requête.
 
