@@ -1,0 +1,37 @@
+# checklist sécurité 
+
+- [ ] clickjacking
+- [ ] Requête silencieuses
+- [x] cookies
+- [x] strict mode
+- [x] Hashage
+- [x] Salage
+- [x] Authentification vs Autorisation
+- [x] RBAC
+- [ ] Combien des 63 recommendations pour le navigateur de l'ANSSI vous suivez? Pourquoi?
+- [ ] Combien des 42 recommendations pour les mots de passe de l'ANSSI vous suivez? Pourquoi?
+- [x] Sessions
+- [x] Tokens
+- [x] La compromission des ressources applications
+    - Point d'eau
+- [x] Le vol de données
+- [ ] Deni de service
+- [x] XSS
+- [x] CSRF
+- [x] SQLI
+- [x] Defense en profondeur
+- [x] Réduction de surface d'attaque
+- [x] Moindre privilège
+- [x] Sécurisation de l'API
+- [x] HTTPS / TLS / HSTS
+- [x] Sanitization
+- [x] Journalisation
+- [x] SHA-256
+- [x] Stratégie de sauvegarde
+- [x] RGPD
+- [x] Audit (PASSI)
+- [x] Bug Bounty
+- [x] SOP
+- [x] CORS
+- [x] CSP
+- [x] SRI
